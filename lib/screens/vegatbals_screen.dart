@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class VegatbalsScreen extends StatefulWidget {
   const VegatbalsScreen({super.key});
@@ -23,7 +21,7 @@ class _VegatbalsScreenState extends State<VegatbalsScreen> {
                 Row(
                   children: [
                     //SizedBox(width: 20,),
-                    Padding(
+                    const Padding(
                       // padding: const EdgeInsets.only(left: 20),
                       padding: EdgeInsetsDirectional.only(
                           start: 20, top: kToolbarHeight),
@@ -39,7 +37,7 @@ class _VegatbalsScreenState extends State<VegatbalsScreen> {
                         ],
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Image.asset('assets/Vegetables.png'),
                   ],
                 ),
@@ -52,11 +50,11 @@ class _VegatbalsScreenState extends State<VegatbalsScreen> {
                       width: MediaQuery.of(context).size.width,
                       child: TextFormField(
                         decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.search_sharp),
+                          prefixIcon: const Icon(Icons.search_sharp),
                           hintText: "search",
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(27),
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               width: 1,
                               color: Color(0xfffD9D0E3),
                             ),
@@ -71,6 +69,83 @@ class _VegatbalsScreenState extends State<VegatbalsScreen> {
               ],
             ),
           ),
+          SizedBox(
+            height: 40,
+          ),
+          Expanded(
+            child: GridView.count(
+              crossAxisCount: 2,
+              mainAxisSpacing: 10,
+              crossAxisSpacing: 10,
+              padding: const EdgeInsets.all(10),
+              // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              //   crossAxisCount: 2,
+              //   childAspectRatio: 5,
+              // ),
+              children: [
+                Container(
+                  height: 34,
+                  width: 100,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(17),
+                    color: const Color.fromARGB(255, 204, 64, 64),
+                  ),
+                  child: Text(
+                    'pepper',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Color.fromARGB(255, 170, 103, 252)),
+                  ),
+                ),
+                Container(
+                  height: 34,
+                  width: 100,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(17),
+                    color: const Color.fromARGB(255, 204, 64, 64),
+                  ),
+                  child: Text(
+                    'pepper',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Color.fromARGB(255, 170, 103, 252)),
+                  ),
+                ),
+                Container(
+                  height: 34,
+                  width: 100,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(17),
+                    color: const Color.fromARGB(255, 204, 64, 64),
+                  ),
+                  child: Text(
+                    'pepper',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Color.fromARGB(255, 170, 103, 252)),
+                  ),
+                ),
+                Container(
+                  height: 34,
+                  width: 100,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(17),
+                    color: const Color.fromARGB(255, 204, 64, 64),
+                  ),
+                  child: Text(
+                    'pepper',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Color.fromARGB(255, 170, 103, 252)),
+                  ),
+                )
+              ],
+            ),
+          )
         ],
       ),
     );
