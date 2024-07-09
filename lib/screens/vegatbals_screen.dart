@@ -15,11 +15,25 @@ class _VegatbalsScreenState extends State<VegatbalsScreen> {
         children: [
           Row(
             children: [
-              Column(
-                children: [
-                  Icon(Icons.arrow_back_ios_new),
-                  Text('vegatbals'),
-                ],
+              SizedBox(
+                width: 20,
+              ),
+              Padding(
+                // padding: const EdgeInsets.only(left: 20),
+                padding: EdgeInsetsDirectional.only(start: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Icon(Icons.arrow_back_ios_new),
+                    Text(
+                      'vegatbals',
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ],
+                ),
               ),
               Spacer(),
               Image.asset('assets/Vegetables.png'),
